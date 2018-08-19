@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './forecast/background/background_with_rings.dart';
 import './forecast/app_bar.dart';
+import './forecast/week_drawer.dart';
 
 void main(){
   runApp(new MyApp());
@@ -23,6 +24,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -35,7 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
             left: 0.0,
             right: 0.0,
             child: new ForecastAppBar()
-          )
+          ),
+            new WeekDrawer(),
+
         ],
       )
     );
