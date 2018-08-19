@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './forecast/background/background_with_rings.dart';
+import './forecast/app_bar.dart';
 
 void main(){
   runApp(new MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "Klime8",
+      debugShowCheckedModeBanner: false,
       home: new MyHomePage(),
     );
   }
@@ -26,7 +28,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Scaffold(
       body: new Stack(
         children: <Widget>[
-          new BackgroundWithRings()
+          new BackgroundWithRings(),
+
+          new Positioned(
+            top: 0.0,
+            left: 0.0,
+            right: 0.0,
+            child: new ForecastAppBar()
+          )
         ],
       )
     );
